@@ -7,9 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.github.eis.myandroidapp.R
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 
 
-class MapsFragment : Fragment() {
+
+
+class MapsFragment : Fragment(), OnMapReadyCallback {
+
+    var onMapReadyFunc:((GoogleMap) -> Unit)? = null
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        onMapReadyFunc?.invoke(googleMap)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,15 +32,13 @@ class MapsFragment : Fragment() {
         return inflater!!.inflate(R.layout.fragment_maps, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
 
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
+        val smf = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+
+        smf.getMapAsync(this)
     }
-
-    override fun onDetach() {
-        super.onDetach()
-    }
-
 
     companion object {
         fun newInstance(): MapsFragment {
