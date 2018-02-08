@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.github.eis.myandroidapp.R;
 
-public class ScreenSlidePageFragment extends Fragment {
+public class ScreenSlidePagerFragment extends Fragment {
 
     private TextView textView;
     private String text = "";

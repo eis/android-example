@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
- * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
+ * A simple pager adapter that represents 5 ScreenSlidePagerFragment objects, in
  * sequence.
  */
 public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
@@ -18,7 +18,7 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
+        ScreenSlidePagerFragment fragment = new ScreenSlidePagerFragment();
         fragment.setText("position " + (position+1));
         return fragment;
     }
