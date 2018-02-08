@@ -1,6 +1,5 @@
 package com.github.eis.myandroidapp.map
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -11,9 +10,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 
-
-
-
 class MapsFragment : Fragment(), OnMapReadyCallback {
 
     var onMapReadyFunc:((GoogleMap) -> Unit)? = null
@@ -22,14 +18,10 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         onMapReadyFunc?.invoke(googleMap)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.fragment_maps, container, false)
+        return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
     override fun onResume() {

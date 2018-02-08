@@ -17,7 +17,6 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
         ScreenSlidePagerFragment fragment = new ScreenSlidePagerFragment();
         fragment.setText("position " + (position+1));
         return fragment;

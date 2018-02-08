@@ -26,6 +26,9 @@
         <activity android:name=".slide.ScreenSlidePagerActivity"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity android:name=".map.MapsActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
