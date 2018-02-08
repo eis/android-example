@@ -4,4 +4,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_map">Map</string>
     <string name="title_notifications">Notifications</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu ante, tincidunt quis arcu nec, efficitur gravida dolor. Phasellus ac leo aliquam, dapibus ante pellentesque, tempus est. Etiam justo neque, lobortis in nulla sed, venenatis scelerisque massa. Donec blandit est id dignissim semper. In quam mi, dictum vitae hendrerit quis, ornare vitae elit. Maecenas porttitor tristique nulla non consectetur. Ut nec leo augue. Cras a elit consectetur, viverra dolor id, fringilla velit. Etiam gravida, augue ac semper tincidunt, arcu magna mattis velit, id venenatis sem sem vel eros. Pellentesque hendrerit interdum quam nec gravida. Morbi vel varius dolor. In sed pellentesque tellus. Proin tincidunt est eget elit tempor, sed mattis turpis suscipit.</string>
 </resources>

@@ -10,18 +10,24 @@ import android.provider.Settings
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentStatePagerAdapter
+import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.View
 import com.github.eis.myandroidapp.home.HomeFragment
 import com.github.eis.myandroidapp.map.GPSTracker
 import com.github.eis.myandroidapp.map.MapsFragment
+import com.github.eis.myandroidapp.slide.ScreenSlidePageFragment
+import com.github.eis.myandroidapp.slide.ScreenSlidePagerActivity
+import com.github.eis.myandroidapp.slide.ScreenSlidePagerAdapter
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Circle
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
-import kotlinx.android.synthetic.main.activity_bottom_nav.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
 
-        setContentView(R.layout.activity_bottom_nav)
+        setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
@@ -58,7 +64,9 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                showFragment(homeFragment)
+
+                startActivity(Intent(this, ScreenSlidePagerActivity::class.java))
+
                 return@OnNavigationItemSelectedListener true
             }
         }
